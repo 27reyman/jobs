@@ -1,0 +1,155 @@
+
+<html>
+<body>
+<h1>Installation Steps</h1>
+<h3>Attach an EBS volume to EC2 instance</h3>
+1. Launch 2 EC2 instances in different AZs (Amazon Linux, t2.micro)<br>
+2. Create new EBS volume and attach to instance 1 (both in same AZs)<br>
+3. Mount volume in the instance 1 at /mnt/mydisk or any other directory
+4. Create some files on the volume (/mnt/mydisk/test)<br>
+5. Take volume snapshot<br>
+6. Unmount volume<br>
+7. Detach volume from AWS console. (Optionally Delete the volume)<br>
+8. Create new volume from snapshot and attach to instance 2. (Do not format the disk again. It has fs already)<br>
+9. Mount it inside instance 2<br>
+10. Check if you can see same file there<br>
+<h3>Installing JAVA</h3>
+# wget https://download.oracle.com/otn-pub/java/jdk/15.0.1+9/51f4f36ad4ef43e39d0dfdbaf6549e32/jdk-15.0.1_linux-x64_bin.deb?AuthParam=1609530722_66d0d2876f59cde47569ae108bb74d5c<br>
+# java -version<br>
+# mv jdk-15.0.1_linux-x64_bin.deb\?AuthParam\=1609530722_66d0d2876f59cde47569ae108bb74d5c jdk-15.0.1_linux-x64_bin.deb<br>
+# apt --fix-broken install<br>
+# dpkg -i jdk-15.0.1_linux-x64_bin.deb<br>
+# update-alternatives --install /usr/bin/java java /usr/lib/jvm/jdk-15.0.1/bin/java 1			-- for javac<br>
+# update-alternatives --install /usr/bin/javac javac /usr/lib/jvm/jdk-15.0.1/bin/javac 1		-- for javac<br>
+# java --version<br>
+# javac -version<br>
+# update-alternatives --config java<br>
+# vim /etc/environment<br>
+# source /etc/environment<br>
+# echo $JAVA_HOME<br>
+
+<h3>Installing Apache2</h3>
+# apt update<br>
+# apt install apache2 -y<br>
+# service apache2 status<br>
+<h3>Installing Apache-tomcat</h3>
+# wget https://mirrors.estointernet.in/apache/tomcat/tomcat-9/v9.0.41/bin/apache-tomcat-9.0.41.tar.gz<br>
+# tar -xvzf apache-tomcat-9.0.41.tar.gz<br>
+# cd apache-tomcat-9.0.41/bin<br>
+# ./startup.sh<br>
+<h3>Jenkins Installation</h3>
+# apt install openjdk-8-jdk<br>
+# wget -q -O - https://pkg.jenkins.io/debian/jenkins.io.key | sudo apt-key add -<br>
+# sudo sh -c 'echo deb http://pkg.jenkins.io/debian-stable binary/ > /etc/apt/sources.list.d/jenkins.list'<br>
+# sudo apt update<br>
+# apt-get install jenkins<br> 
+# systemctl status jenkins<br>
+# cat /var/lib/jenkins/secrets/initialAdminPassword<br>
+<h3>Steps to Recover Key Pairs</h3>
+# Stop server-without-keys and detach the root volume<br>
+# Start another serve which has keys and ensure they run the same operating system as previous server, say RedHat Linux<br>
+# Attach the 'server-without-keys' root volume to this server<br>
+# Create the Mount Point<br>
+mkdir -p /var/recovery-disk<br>
+# Mount the disk<br>
+mount -o nouuid /dev/xvdf2 /var/recovery-disk<br>
+# Copy over the authorized keys<br>
+cp /home/ec2-user/.ssh/authorized_keys  /var/recovery-disk/home/ec2-user/.ssh/authorized_keys<br>
+# Unmount the disk<br>
+umount /var/recovery-disk<br>
+# Attach from AWS GUI Console to server as root disk. For example: /dev/sda<br>
+# Connect with Keys [RecoveryServer Key]<br>
+
+<b>SSH Key Recovery</b><br>
+Method 1 - https://youtu.be/5btWXn4yWzQ<br>
+Method 2 - https://youtu.be/Bqt538HRsws<br>
+#Valaxy #AWS #EC2 #LostKeyRecovery<br>
+
+<h3>Pipelines</h3>
+A pipeline is basically a series of jobs when jobs which are executed together to get a particular work done.<br>
+1. to pull the code from the git<br>
+2. Deploy it using a docker file (build it inside a docker container, build an image and once image is built we need to deploy it). Once the image is deployed we check whether the application is working or not<br>
+--  Once the application is working we will push the code to the production server where it will build inside the docker container and then the docker image is deployed to production<br>
+
+<h3>VPC Configuration</h3>
+<b>Script to install HTTPD</b>
+# !/bin/bash<br>
+# Installing HTTPD<br>
+# apt install apache2 -y<br>
+# echo "Launching EC2 Instance and Installing httpd"> /var/www/html/index.html<br>
+# chkconfig httpd on<br>
+# systemctl restart httpd<br>
+
+
+<h3>VPC Steps</h3>
+1. Create new VPC (10.0.0.0/16)<br>
+2. Create Private ((10.0.1.0/24) and Public ((10.0.1.0/24) Subnets<br>
+3. Create Internet Gateway and associate it<br>
+4. Create NAT Gateway and allocate Elastic IP.<br>
+5. Create two route tables (for each subnet).<br>
+   -- For Private RT: Edit route rules and assign NAT Gateway for (0.0.0.0/16)<br>
+   -- In subnet Assocation assign private subnet<br>
+   -- For Public RT: Edit route rules and assign internet Gateway for (0.0.0.0/16)<br>
+   -- In subnet Assocation assign Public subnet<br>
+5. Create two security groups (one each for Private/Public)<br>
+   -- Edit inbound rules and open ports: 22, 80, 8080, 443 for public security group to connect to the subnet<br>
+   -- Edit inbound rules and open ports: 1433, 3389 for private security group to connect to private subnet.<br>
+<h3>Nagios Installation</h3>
+# yum install -y httpd httpd-tools php gcc glibc glibc-common gd gd-devel make net-snmp<br>
+# useradd nagios; groupadd nagcmd<br>
+# usermod -G nagcmd nagios<br>
+# usermod -G nagcmd apache<br>
+# mkdir /root/nagios<br>
+# cd /root/nagios<br>
+# wget https://assets.nagios.com/downloads/nagioscore/releases/nagios-4.4.5.tar.gz<br>
+# wget https://nagios-plugins.org/download/nagios-plugins-2.2.1.tar.gz<br>
+# tar -xvf nagios-4.4.5.tar.gz<br>
+# tar -xvf nagios-plugins-2.2.1.tar.gz<br>
+# ls -l<br>
+# cd nagios-4.4.5/<br>
+# ./configure --with-command-group=nagcmd<br>
+# ll -l<br>
+# make all<br>
+# make install<br>
+# make install-init<br>
+# make install-commandmode<br>
+# make install-config<br>
+# vi /usr/local/nagios/etc/objects/contacts.cfg<br>
+# make install-webconf<br>
+# htpasswd -s -c /usr/local/nagios/etc/htpasswd.users nagiosadmin<br>
+# cd /root/nagios<br>
+# cd nagios-plugins-2.2.1/<br>
+# ./configure --with-nagios-user=nagios --with-nagios-group=nagios<br>
+# make<br>
+# make install<br>
+# /usr/local/nagios/bin/nagios -v /usr/local/nagios/etc/nagios.cfg<br>
+# chkconfig --add nagios<br>
+# chkconfig --level 35 nagios on<br>
+# chkconfig --add httpd<br>
+# chkconfig --level 35 httpd on<br>
+<h1>Shell Scripts</h1>
+<h3>Script to list files and date </h3>
+#!/bin/bash<br>
+touch file{1..5}<br>
+date=`date`<br>
+files=`ls -l`<br>
+echo "Today date is $date"<br>
+echo "List of files are $files"<br>
+<h3>Script to delete file</h3>
+#!/bin/sh<br>
+touch file1 file2<br>
+echo "Enter filename to be deleted : "<br>
+read file<br>
+echo "Type 'y' for yes and 'n' for no"<br>
+rm -i $file<br>
+echo "That was your decision"<br>
+<h3>Script for maths</h3>
+#!/bin/bash<br>
+let x=10+10+30<br>
+let y=10+20+70<br>
+let z=($x+$y)/2<br>
+echo "x is $x"<br>
+echo "y is $y"<br>
+echo "z is $z"<br>
+</body>
+</html>
