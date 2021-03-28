@@ -1,0 +1,868 @@
+
+<html>
+<body>
+<h1>Question & Answers for Cloud Computing</h1>
+<b>================================================================</b><br><br>
+<font size="+2">
+<b>Q1) What is AWS?</b><br>
+<b>Answer: </b>AWS stands for Amazon Web Services. AWS is a platform that provides on-demand resources for hosting web services, storage, networking, databases and other resources over the internet with a pay-as-you-go pricing.<br><br>
+<b>Q2) What are the components of AWS?</b><br>
+<b>Answer: </b>EC2: Elastic Compute Cloud, S3: Simple Storage Service, Route53, EBS: Elastic Block Store, CloudWatch, Key-Paris are few of the components of AWS.<br><br>
+<b>Q3) What are key-pairs?</b><br>
+<b>Answer: </b>Key-pairs are secure login information for your instances/virtual machines. To connect to the instances, we use key-pairs that contain a public-key and private-key.<br><br>
+<b>Q4) What is S3?</b><br>
+<b>Answer: </b>S3 stands for Simple Storage Service. It is a storage service that provides an interface that you can use to store any amount of data, at any time, from anywhere in the world. With S3 you pay only for what you use, and the payment model is pay-as-you-go.<br><br>
+<b>Q5) What are the pricing models for EC2 instances?</b><br>
+<b>Answer: </b>The different pricing model for EC2 instances are as below:<br>
+<li>On-demand</li>
+<li>Reserved</li>
+<li>Spot</li>
+<li>Scheduled</li>
+<li>Dedicated</li><br>
+<b>Q6) What are the types of volumes for EC2 instances?</b><br>
+<b>Answer: </b>There are two types of volumes,<br>
+<li>Instance store volumes</li>
+<li>EBS: Elastic Block Stores</li><br>
+<b>Q7) What are EBS volumes?</b><br>
+<b>Answer: </b>EBS stands for Elastic Block Stores. They are persistent volumes that you can attach to the instances. With EBS volumes, your data will be preserved even when you stop your instances, unlike your instance store volumes where the data is deleted when you stop the instances.<br><br>
+<b>Q8) What are the types of volumes in EBS?</b><br>
+<b>Answer: </b>Following are the types of volumes in EBS,<br>
+<li>General purpose</li>
+<li>Provisioned IOPS</li>
+<li>Magnetic</li>
+<li>Cold HDD</li>
+<li>Throughput optimized</li><br>
+<b>Q9) What are the different types of instances?</b><br>
+<b>Answer: </b>Following are the types of instances,<br>
+<li>General purpose</li>
+<li>Computer Optimized</li>
+<li>Storage Optimized</li>
+<li>Memory Optimized</li>
+<li>Accelerated Computing</li><br>
+<b>Q10) What is an auto-scaling and what are the components?</b><br>
+<b>Answer: </b>Auto scaling allows you to automatically scale-up and scale-down the number of instances depending on the CPU utilization or memory utilization. There are 2 components in Auto scaling, they are Auto-scaling groups and Launch Configuration.<br><br>
+<b>Q11) What are reserved instances?</b><br>
+<b>Answer: </b>Reserved instances are the instance that you can reserve a fixed capacity of EC2 instances. In reserved instances you will have to get into a contract of 1 year or 3 years.<br><br>
+<b>Q12) What is an AMI?</b><br>
+<b>Answer: </b>AMI stands for Amazon Machine Image. AMI is a template that contains the software configurations, launch permission and a block device mapping that specifies the volume to attach to the instance when it is launched.<br><br>
+<b>Q13) What is an EIP?</b><br>
+<b>Answer: </b>EIP stands for Elastic IP address. It is designed for dynamic cloud computing. When you want to have a static IP address for your instances when you stop and restart your instances, you will be using EIP address.<br><br>
+<b>Q14) What is CloudWatch?</b><br>
+<b>Answer: </b>CloudWatch is a monitoring tool that you can use to monitor your various AWS resources. Like health check, network, Application, etc.<br><br>
+<b>Q15) What are the types in CloudWatch?</b><br>
+<b>Answer: </b>There are 2 types in CloudWatch. Basic monitoring and detailed monitoring. Basic monitoring is free and detailed monitoring is chargeable.<br><br>
+<b>Q16) What are the CloudWatch metrics that are available for EC2 instances?</b><br>
+<b>Answer: </b>Diskreads, Diskwrites, CPU utilization, networkpacketsIn, networkpacketsOut, networkIn, networkOut, CPUCreditUsage, CPUCreditBalance.<br><br>
+<b>Q17) What is the minimum and maximum size of individual objects that you can store in S3</b><br>
+<b>Answer: </b>The minimum size of individual objects that you can store in S3 is 0 bytes and the maximum bytes that you can store for individual objects is 5TB.<br><br>
+<b>Q18) What are the different storage classes in S3?</b><br>
+<b>Answer: </b>Following are the types of storage classes in S3,<br>
+<li>Standard frequently accessed</li>
+<li>Standard infrequently accessed</li>
+<li>One-zone infrequently accessed</li>
+<li>Glacier</li>
+<li>RRS: reduced redundancy storage</li><br>
+<b>Q19) What is the default storage class in S3?</b><br>
+<b>Answer: </b>The default storage class in S3 in Standard frequently accessed.<br><br>
+<b>Q20) What is glacier?</b><br>
+<b>Answer: </b>Glacier is the back up or archival tool that you use to back up your data in S3.<br><br>
+<b>Q21) How can you secure the access to your S3 bucket?</b><br>
+<b>Answer: </b>There are two ways that you can control the access to your S3 buckets,<br>
+<li>ACL: Access Control List</li>
+<li>Bucket polices</li><br>
+<b>Q22) How can you encrypt data in S3?</b><br>
+<b>Answer: </b>You can encrypt the data by using the below methods,<br>
+<li>Server-Side Encryption: S3 (AES 256 encryption) </li>
+<li>Server-Side Encryption: KMS (Key management Service) </li><br>
+<li>Server-Side Encryption: C (Client Side) </li><br>
+<b>Q23) What are the parameters for S3 pricing?</b><br>
+<b>Answer: </b>The pricing model for S3 is as below,<br>
+<li>Storage used</li>
+<li>Number of requests you make</li>
+<li>Storage management</li>
+<li>Data transfer</li>
+<li>Transfer acceleration</li><br>
+<b>Q24) What is the pre-requisite to work with Cross region replication in S3?</b><br>
+<b>Answer: </b>You need to enable versioning on both source bucket and destination to work with cross region replication. Also, both the source and destination bucket should be in different region.<br><br>
+<b>Q25) What are roles?</b><br>
+<b>Answer: </b>Roles are used to provide permissions to entities that you trust within your AWS account. Roles are users in another account. Roles are like users but with roles you do not need to create any username and password to work with the resources.<br><br>
+<b>Q26) What are policies and what are the types of policies?</b><br>
+<b>Answer: </b>Policies are permissions that you can attach to the users that you create. These policies will contain that access that you have provided to the users that you have created. There are 2 types of policies.<br>
+<li>Managed policies<br>
+<li>Inline policies<br><br>
+<b>Q27) What is CloudFront?</b><br>
+<b>Answer: </b>CloudFront is an AWS web service that provided businesses and application developers an easy and efficient way to distribute their content with low latency and high data transfer speeds. CloudFront is content delivery network of AWS.<br><br>
+<b>Q28) What are edge locations?</b><br>
+<b>Answer: </b>Edge location is the place where the contents will be cached. When a user tries to access some content, the content will be searched in the edge location. If it is not available, then the content will be made available from the origin location and a copy will be stored in the edge location.<br><br>
+<b>Q29) What is the maximum individual archive that you can store in glacier?</b><br>
+<b>Answer: </b>You can store a maximum individual archive of up to 40 TB.<br><br>
+<b>Q30) What is VPC?</b><br>
+<b>Answer: </b>VPC stands for Virtual Private Cloud. VPC allows you to easily customize your networking configuration. VPC is a network that is logically isolated from other network in the cloud. It allows you to have your own IP address range, subnets, internet gateways, NAT gateways and security groups.<br><br>
+<b>Q31) What is VPC peering connection?</b><br>
+<b>Answer: </b>VPC peering connection allows you to connect 1 VPC with another VPC. Instances in these VPC behave as if they are in the same network.<br><br>
+<b>Q32) What are NAT gateways?</b><br>
+<b>Answer: </b>NAT stands for Network Address Translation. NAT gateways enables instances in a private subnet to connect to the internet but prevent the internet from initiating a connection with those instances.<br><br>
+<b>Q33) How can you control the security to your VPC?</b><br>
+<b>Answer: </b>You can use security groups and NACL (Network Access Control List) to control the security to your VPC.<br><br>
+<b>Q34) What are the different types of storage gateway?</b><br>
+<b>Answer: </b>Following are the types of storage gateway.<br>
+<li>File gateway</li>
+<li>Volume gateway</li>
+<li>Tape gateway</li><br>
+<b>Q35) What is a snowball?</b><br>
+<b>Answer: </b>Snowball is a data transport solution that used source appliances to transfer large amounts of data into and out of AWS. Using snowball, you can move huge amount of data from one place to another which reduces your network costs, long transfer times and provides better security.<br><br>
+<b>Q36) What are the database types in RDS?</b><br>
+<b>Answer: </b>Following are the types of databases in RDS,<br>
+<li>Aurora</li>
+<li>Oracle</li>
+<li>MYSQL server</li>
+<li>PostgreSQL</li>
+<li>MariaDB</li>
+<li>SQL server</li><br>
+<b>Q37) What is a redshift?</b><br>
+<b>Answer: </b>Amazon redshift is a data warehouse product. It is a fast and powerful, fully managed, petabyte scale data warehouse service in the cloud.<br><br>
+<b>Q38) What is SNS?</b><br>
+<b>Answer: </b>SNS stands for Simple Notification Service. SNS is a web service that makes it easy to send notifications from the cloud. You can set up SNS to receive email notification or message notification.<br><br>
+<b>Q39) What are the types of routing polices in route53?</b><br>
+<b>Answer: </b>Following are the types of routing policies in route53,<br>
+<li>Simple routing</li>
+<li>Latency routing</li>
+<li>Failover routing</li>
+<li>Geolocation routing</li>
+<li>Weighted routing</li>
+<li>Multivalued answer</li><br>
+<b>Q40) What is the maximum size of messages in SQS?</b><br>
+<b>Answer: </b>The maximum size of messages in SQS is 256 KB.<br><br>
+<b>Q41) What are the types of queues in SQS?</b><br>
+<b>Answer: </b>There are 2 types of queues in SQS.<br>
+<li>Standard queue</li>
+<li>FIFO (First in First Out)</li><br><br>
+<b>Q42) What is multi-AZ RDS?</b><br>
+<b>Answer: </b>Multi-AZ (Availability Zone) RDS allows you to have a replica of your production database in another availability zone. Multi-AZ (Availability Zone) database is used for disaster recovery. You will have an exact copy of your database. So, when your primary database goes down, your application will automatically failover to the standby database.<br><br>
+<b>Q43) What are the types of backups in RDS database?</b><br>
+<b>Answer: </b>There are 2 types of backups in RDS database.<br>
+<li>Automated backups</li>
+<li>Manual backups which are known as snapshots.<br><br>
+<b>Q45) What are the types of load balancers in EC2?</b><br>
+<b>Answer: </b>There are 3 types of load balancers,<br><li>Application load balancer</li><li>Network load balancer</li><li>Classic load balancer</li><br>
+<b>Q46) What is and ELB?</b><br>
+<b>Answer: </b>ELB stands for Elastic Load balancing. ELB automatically distributes the incoming application traffic or network traffic across multiple targets like EC2, containers, IP addresses.<br><br>
+<b>Q47) What are the two types of access that you can provide when you are creating users?</b><br>
+<b>Answer: </b>Following are the two types of access that you can create.<br><li>Programmatic access</li><li>Console access</li><br>
+<b>Q48) What are the benefits of auto scaling?</b><br>
+<b>Answer: </b>Following are the benefits of auto scaling<br><li>Better fault tolerance</li><li>Better availability</li><li>Better cost management</li><br>
+<b>Q49) What are security groups?</b><br>
+<b>Answer: </b>Security groups acts as a firewall that contains the traffic for one or more instances. You can associate one or more security groups to your instances when you launch then. You can add rules to each security group that allow traffic to and from its associated instances. You can modify the rules of a security group at any time, the new rules are automatically and immediately applied to all the instances that are associated with the security group<br><br>
+<b>Q50) What are shared AMI’s?</b><br>
+<b>Answer: </b>Shared AMI’s are the AMI that are created by other developed and made available for other developed to use.<br><br>
+<b>Q51) What is the difference between the classic load balancer and application load balancer?</b><br>
+<b>Answer: </b>Dynamic port mapping, multiple port multiple listeners is used in Application Load Balancer, one port one listener is achieved via Classic Load Balancer<br><br>
+<b>Q52) By default how many Ip address does AWS reserve in a subnet?</b><br>
+<b>Answer: </b>5<br><br>
+<b>Q53) What is meant by subnet?</b><br>
+<b>Answer: </b>A large section of IP Address divided into chunks are known as subnets<br><br>
+<b>Q54) How can you convert a public subnet to private subnet?</b><br>
+<b>Answer: </b>Remove IGW & add NAT Gateway, Associate subnet in Private route table<br><br>
+<b>Q55) Is it possible to reduce an EBS volume?</b><br>
+<b>Answer: </b>No, it’s not possible, we can increase it but not reduce them<br><br>
+<b>Q56) What is the use of elastic IP are they charged by AWS?</b><br>
+<b>Answer: </b>These are ipv4 address which are used to connect the instance from internet, they are charged if the instances are not attached to it<br><br>
+<b>Q57) One of my s3 is bucket is deleted but I need to restore is there any possible way?</b><br>
+<b>Answer: </b>If versioning is enabled, we can easily restore them<br><br>
+<b>Q58) When I try to launch an ec2 instance I am getting Service limit exceed, how to fix the issue?</b><br>
+<b>Answer: </b>By default, AWS offer service limit of 20 running instances per region, to fix the issue we need to contact AWS support to increase the limit based on the requirement<br><br>
+<b>Q59) I need to modify the EBS volumes in Linux and windows is it possible</b><br>
+<b>Answer: </b>Yes, it’s possible from console use modify volumes in section give the size u need then for windows go to disk management for Linux mount it to achieve the modification<br><br>
+<b>Q60) Is it possible to stop an RDS instance, how can I do that?</b><br>
+<b>Answer: </b>Yes, it’s possible to stop rds. Instance which are non-production and non multi AZ’s<br><br>
+<b>Q61) What is meant by parameter groups in rds. And what is the use of it?</b><br>
+<b>Answer: </b>Since RDS is a managed service AWS offers a wide set of parameters in RDS as parameter group which is modified as per requirement<br><br>
+<b>Q62) What is the use of tags and how they are useful?</b><br>
+<b>Answer: </b>Tags are used for identification and grouping AWS Resources<br><br>
+<b>Q63) I am viewing an AWS Console but unable to launch the instance, I receive an IAM Error how can I rectify it?</b><br>
+<b>Answer: </b>As AWS user I don’t have access to use it, I need to have permissions to use it further<br><br>
+<b>Q64) I don’t want my AWS Account id to be exposed to users how can I avoid it?</b><br>
+<b>Answer: </b>In IAM console there is option as sign in URL where I can rename my own account name with AWS account<br><br>
+<b>Q65) By default how many Elastic IP address does AWS Offer?</b><br>
+<b>Answer: </b>5 elastic IP per region<br><br>
+<b>Q66) You are enabled sticky session with ELB. What does it do with your instance?</b><br>
+<b>Answer: </b>Binds the user session with a specific instance<br><br>
+<b>Q67) Which type of load balancer makes routing decisions at either the transport layer or the Application layer and supports either EC2 or VPC.</b><br>
+<b>Answer: </b>Classic Load Balancer<br><br>
+<b>Q68) Which is virtual network interface that you can attach to an instance in a VPC?</b><br>
+<b>Answer: </b>Elastic Network Interface<br><br>
+<b>Q69) You have launched a Linux instance in AWS EC2. While configuring security group, you Have selected SSH, HTTP, HTTPS protocol. Why do we need to select SSH?</b><br>
+<b>Answer: </b>To verify that there is a rule that allows traffic from EC2 Instance to your computer<br><br>
+<b>Q70) You have chosen a windows instance with Classic and you want to make some change to the Security group. How will these changes be effective?</b><br>
+<b>Answer: </b>Changes are automatically applied to windows instances<br><br>
+<b>Q71) Load Balancer and DNS service comes under which type of cloud service?</b><br>
+<b>Answer: </b>IAAS-Storage<br><br>
+<b>Q72) You have an EC2 instance that has an unencrypted volume. You want to create another<br>
+ Encrypted volume from this unencrypted volume. Which of the following steps can achieve this?</b><br>
+<b>Answer: </b>Create a snapshot of the unencrypted volume (applying encryption parameters), copy the snapshot and create a volume from the copied snapshot<br><br>
+<b>Q73) Where does the user specify the maximum number of instances with the auto scaling Commands?</b><br>
+<b>Answer: </b>Auto scaling Launch Config<br><br>
+<b>Q74) Which are the types of AMI provided by AWS?</b><br>
+<b>Answer: </b>Instance Store backed, EBS Backed<br><br>
+<b>Q75) After configuring ELB, you need to ensure that the user requests are always attached to a Single instance. What setting can you use?</b><br>
+<b>Answer: </b>Sticky session<br><br>
+<b>Q76) When do I prefer to Provisioned IOPS over the Standard RDS storage?</b><br>
+<b>Answer: </b>If you have done batch-oriented is workloads.<br><br>
+<b>Q77) If I am running on my DB Instance a Multi-AZ deployments, can I use to the standby the DB Instance for read or write an operation along with to primary DB instance?</b><br>
+<b>Answer: </b>Primary DB instance does not work.<br><br>
+<b>Q78) Which the AWS services will you use to the collect and the process e-commerce data for the nearby real-time analysis?</b><br>
+<b>Answer: </b>Good of Amazon DynamoDB.<br><br>
+<b>Q79) A company is deploying the new two-tier a web application in AWS. The company must limit on staff and the requires high availability, and the application requires to complex queries and table joins. Which configuration provides to the solution for company’s requirements?</b><br>
+<b>Answer: </b>A web application provide on Amazon DynamoDB solution.<br><br>
+<b>Q80) Which the statement use to cases are suitable for Amazon DynamoDB?</b><br>
+<b>Answer: </b>The storing metadata for the Amazon S3 objects& The Running of relational joins and complex an update.<br><br>
+<b>Q81) Your application has to the retrieve on data from your user’s mobile take every 5 minutes and then data is stored in the DynamoDB, later every day at the particular time the data is an extracted into S3 on a per user basis and then your application is later on used to visualize the data to user. You are the asked to the optimize the architecture of the backend system can to lower cost, what would you recommend do?</b><br>
+<b>Answer: </b>Introduce Amazon Elastic cache to the cache reads from the Amazon DynamoDB table and to reduce the provisioned read throughput.<br><br>
+<b>Q82) You are running to website on EC2 instances can deployed across multiple Availability Zones with a Multi-AZ RDS MySQL Extra Large DB Instance etc. Then site performs a high number of the small reads and the write per second and the relies on the eventual consistency model. After the comprehensive tests you discover to that there is read contention on RDS MySQL. Which are the best approaches to the meet these requirements?</b><br>
+<b>Answer: </b>The Deploy Elastic Cache in-memory cache is running in each availability zone and Then Increase the RDS MySQL Instance size and the Implement provisioned IOPS.<br><br>
+<b>Q83) A start-up is running to a pilot deployment of around 100 sensors to the measure street noise and the air quality is urban areas for the 3 months. It was noted that every month to around the 4GB of sensor data are generated. The company uses to a load balanced take auto scaled layer of the EC2 instances and an RDS database with a 500 GB standard storage. The pilot was success and now they want to the deploy take at least 100K sensors. Let which to need the supported by backend. You need to the stored data for at least 2 years to an analyse it. Which setup of following would you be preferring?</b><br>
+<b>Answer: </b>The Replace the RDS instance with a 6 node Redshift cluster with take 96TB of storage.<br><br>
+<b>Q84) Let to Suppose you have an application where do you have to render images and do some of general computing. which service will be best fit your need?</b><br>
+<b>Answer: </b>Used on Application Load Balancer.<br><br>
+<b>Q85) How will change the instance give type for the instances, which are the running in your applications tier and Then using Auto Scaling. Where will you change it from areas?</b><br>
+<b>Answer: </b>Changed to Auto Scaling launch configuration areas.<br><br>
+<b>Q86) You have a content management system running on the Amazon EC2 instance that is the approaching 100% CPU of utilization. Which option will be reduced load on the Amazon EC2 instance?</b><br>
+<b>Answer: </b>Let Create a load balancer and Give register the Amazon EC2 instance with it.<br><br>
+<b>Q87) What does the Connection of draining do?</b><br>
+<b>Answer: </b>The re-routes traffic from the instances which are to be updated (or) failed a health to check.<br><br>
+<b>Q88) When the instance is an unhealthy, it is do terminated and replaced with a new one, which of the services does that?</b><br>
+<b>Answer: </b>The service makes a fault tolerance.<br><br>
+<b>Q89) What are the life cycle to hooks used for the Autoscaling?</b><br>
+<b>Answer: </b>They are used to the put an additional taken wait time to the scale in or scale out events.<br><br>
+<b>Q90) A user has to setup an Auto Scaling group. Due to some issue the group must failed for launch a single instance for the more than 24 hours. What will be happen to the Auto Scaling in the condition?</b><br>
+<b>Answer: </b>The auto Scaling will be suspended to the scaling process.<br><br>
+<b>Q91) You have an the EC2 Security Group with a several running to EC2 instances. You changed to the Security of Group rules to allow the inbound traffic on a new port and protocol, and then the launched a several new instances in the same of Security Group. Such the new rules apply.</b><br>
+<b>Answer: </b>The Immediately to all the instances in security groups.<br><br>
+<b>Q92) To create a mirror make an image of your environment in another region for the disaster recovery’s, which of the following AWS is resources do not need to be recreated in second region?</b><br>
+<b>Answer: </b>May be the selected-on Route 53 Record Sets.<br><br>
+<b>Q93) A customers wants to the captures all client connections to get information from his load balancers at an interval of 5 minutes only, which select option should he choose for his application?</b><br>
+<b>Answer: </b>The condition should be Enable to AWS CloudTrail for the load balancers.<br><br>
+<b>Q94) Which of the services to you would not use to deploy an app?</b><br>
+<b>Answer: </b>Lambda app not used on deploy.<br><br>
+<b>Q95) How do the Elastic Beanstalk can apply to updates?</b><br>
+<b>Answer: </b>By a duplicate ready with an update prepare before swapping.<br><br>
+<b>Q96) A created a key in the Oregon region to encrypt of my data in North Virginia region for security purposes. I added to two users to the key and the external AWS accounts. I wanted to encrypt the object in S3, so when I was tried, then key that I just created is not listed. What could be reason & solution?</b><br>
+<b>Answer: </b>The Key should be working in the same region.<br><br>
+<b>Q97) As a company needs to monitor a read and write IOPS for the AWS MySQL RDS instances and then send real-time alerts to the operations of team. Which AWS services to can accomplish this?</b><br>
+<b>Answer: </b>The monitoring on Amazon CloudWatch<br><br>
+<b>Q98) The organization that is currently using the consolidated billing must recently acquire to another company that already has several the AWS accounts. How could an Administrator to ensure that all the AWS accounts, from the both existing company and then acquired company, is billed to the single account?</b><br>
+<b>Answer: </b>All invites take acquired the company’s AWS account to join existing the companies of organization by using AWS Organizations.<br><br>
+<b>Q99) The user has created the applications, which will be hosted on the EC2. The application makes calls to the Dynamo DB to fetch on certain data. The application using the DynamoDB SDK to connect with the EC2 instance. Which of respect to best practice for the security in this scenario?</b><br>
+<b>Answer: </b>The user should be attaching an IAM roles with the DynamoDB access to EC2 instance.<br><br>
+<b>Q100) You have an application are running on EC2 Instance, which will allow users to download the files from a private S3 bucket using the pre-assigned URL. Before generating to URL, the application should be verify the existence of file in S3. How does the application use the AWS credentials to access S3 bucket securely?</b><br>
+<b>Answer: </b>An Create an IAM role for the EC2 that allows list access to objects in S3 buckets. Launch to instance with this role and retrieve a role’s credentials from EC2 Instance make metadata.<br><br>
+<b>Q101) You use the Amazon CloudWatch as your primary monitoring system for web application. After a recent to software deployment, your users are to get Intermittent the 500 Internal Server to the Errors, when you are using web application. You want to create the CloudWatch alarm and notify the on-call engineer let when these occur. How can you accomplish the using the AWS services?</b><br>
+<b>Answer: </b>An Create a CloudWatch get Logs to group and A define metric filters that assure capture 500 Internal Servers should be Errors. Set a CloudWatch alarm on the metric and By Use of Amazon Simple to create a Notification Service to notify an the on-call engineers when prepare CloudWatch alarm is triggered.<br><br>
+<b>Q102) You are designing a multi-platform of web application for the AWS. The application will run on the EC2 instances and till will be accessed from PCs, tablets and smart phones. Then Supported accessing a platform are Windows, MACOS, IOS and Android. They Separate sticky sessions and SSL certificate took setups are required for the different platform types. Which do describe the most cost effective and Like performance efficient the architecture setup?</b><br>
+<b>Answer: </b>Assign to multiple ELBs an EC2 instance or group of EC2 take instances running to common component of the web application, one ELB change for each platform type. Take Session will be stickiness and SSL termination are done for the ELBs.<br><br>
+<b>Q103) You are migrating to legacy client-server application for AWS. The application responds to a specific DNS visible domain (e.g. www.example.com) and server 2-tier architecture, with multiple application for the servers and the database server. Remote clients use to TCP to connect to the application of servers. The application servers need to know the IP address of clients in order to the function of properly and are currently taking of that information from TCP socket. A Multi-AZ RDS MySQL instance to will be used for database. During the migration you change the application code, but you have filed a change request. How do would you implement the architecture on the AWS in order to maximize scalability and high availability?</b><br>
+<b>Answer: </b>File a change request to get implement of Proxy Protocol support in the application. Use of ELB with TCP Listener and A Proxy Protocol enabled to distribute the load on two application servers in the different AZs.<br><br>
+<b>Q104) Your application currently is leverages AWS Auto Scaling to the grow and shrink as a load Increases/decreases and has been performing as well. Your marketing a team expects and steady ramp up in traffic to follow an upcoming campaign that will result in 20x growth in the traffic over 4 weeks. Your forecast for approximate number of the Amazon EC2 instances necessary to meet peak demand is 175. What should be you do avoid potential service disruptions during the ramp up traffic?</b><br>
+<b>Answer: </b>Check the service limits in the Trusted Advisors and adjust as necessary, so that forecasted count remains within the limits.<br><br>
+<b>Q105) You have a web application running on the six Amazon EC2 instances, consuming about 45% of resources on each instance. You are using the auto-scaling to make sure that six instances are always running. The number of requests this application processes to consistent and does not experience to spikes. Then application is critical to your business and you always want to high availability for. You want to the load be distributed evenly has between all instances. You also want to between use same Amazon Machine Image (AMI) for all instances. Which are architectural choices should you make?</b><br>
+<b>Answer: </b>Deploy to 3 EC2 instances in one of availability zone and 3 in another availability of zones and to use of Amazon Elastic is Load Balancer.<br><br>
+<b>Q106) You are the designing an application that a contains protected health information. Security and Then compliance requirements for your application mandate that all protected to health information in application use to encryption at rest and in the transit module. The application to uses a three-tier architecture. where should data flows through the load balancers and is stored on the Amazon EBS volumes for the processing, and the results are stored in the Amazon S3 using an AWS SDK. Which of the options satisfy the security requirements?</b><br>
+<b>Answer: </b>Use TCP load balancing on load balancer system, SSL termination on Amazon to create EC2 instances, OS-level disk take encryption on Amazon EBS volumes, and The amazon S3 with server-side to encryption and Use the SSL termination on load balancers, an SSL listener on the Amazon to create EC2 instances, Amazon EBS encryption on the EBS volumes containing the PHI, and Amazon S3 with a server-side of encryption.<br><br>
+<b>Q107) A start-up deploys it create photo-sharing site in a VPC. An elastic load balancer distributes to web traffic across two the subnets. Then the load balancer session to stickiness is configured to use of AWS-generated session cookie, with a session TTL of the 5 minutes. The web server to change Auto Scaling group is configured as like min-size=4, max-size=4. The start-up is the preparing for a public launch, by running the load-testing software installed on the single Amazon Elastic Compute Cloud (EC2) instance to running in us-west-2a. After 60 minutes of load-testing, the web server logs of show the following: WEBSERVER LOGS | # of HTTP requests to from load-tester system | # of HTTP requests to from private on beta users || webserver #1 (subnet an us-west-2a) : | 19,210 | 434 | webserver #2 (subnet an us-west-2a) : | 21,790 | 490 || webserver #3 (subnet an us-west-2b) : | 0 | f0 || webserver #4 (subnet an us-west-2b) : | 0 | 428 |Which as recommendations can be help of ensure that load-testing HTTP requests are will evenly distributed across to four web servers?</b><br>
+<b>Answer: </b>Result of cloud is re-configuring the load-testing software to the re-resolve DNS for each web request.<br><br>
+<b>Q108) To serve the Web traffic for a popular product to your chief financial officer and IT director have purchased 10 m1.large heavy utilization of Reserved Instances (RIs) evenly put spread across two availability zones: Route 53 are used to deliver the traffic to on Elastic Load Balancer (ELB) . After the several months, the product grows to even more popular and you need to additional capacity As a result, your company that purchases two c3.2xlarge medium utilization RIs You take register the two c3.2xlarge instances on with your ELB and quickly find that the ml of large instances at 100% of capacity and the c3.2xlarge instances have significant to capacity that’s can unused Which option is the most of cost effective and uses EC2 capacity most of effectively?</b><br>
+<b>Answer: </b>To use a separate ELB for each instance type and the distribute load to ELBs with a Route 53 weighted round of robin.<br><br>
+<b>Q109) An AWS customer is deploying a web application that is the composed of a front-end running on the Amazon EC2 and confidential data that are stored on the Amazon S3. The customer security policy is that all accessing operations to this sensitive data must authenticated and authorized by centralized access to management system that is operated by separate security team. In addition, the web application team that be owns and administers the EC2 web front-end instances are prohibited from having the any ability to access data that circumvents this centralized access to management system. Which are configurations will support these requirements?</b><br>
+<b>Answer: </b>The configure to the web application get authenticate end-users against the centralized access on the management system. Have a web application provision trusted to user’s STS tokens an entitling the download of the approved data directly from an Amazon S3.<br><br>
+<b>Q110) A Enterprise customer is starting on their migration to the cloud, their main reason for the migrating is agility and they want to the make their internal Microsoft active directory available to the many applications running on AWS, this is so internal users for only have to remember one set of the credentials and as a central point of user take control for the leavers and joiners. How could they make their actions the directory secures and the highly available with minimal on-premises on infrastructure changes in the most cost and the time-efficient way?</b><br>
+<b>Answer: </b>By Using a VPC, they could be create an the extension to their data centre and to make use of resilient hardware IPSEC on tunnels, they could then have two domain consider to controller instances that are joined to the existing domain and reside within the different subnets in the different availability zones.<br><br>
+<b>Q111) What is Cloud Computing?</b><br>
+<b>Answer: </b>Cloud computing means it provides services to access programs, application, storage, network, server over the internet through browser or client-side application on your PC, Laptop, Mobile by the end user without installing, updating and maintaining them.<br>
+Cloud computing is a cloud platform service that provides you with the on-demand services that can range from compute, databases, storage, networking, applications and so on. Cloud computing follows your pay-as-you-go model where you are going to pay only for what you are using.<br><br>
+<b>Q112) Why we go for Cloud Computing?</b><br>
+Answer:<br><li>Lower computing cost</li><li>Improved Performance</li><li>No IT Maintenance</li><li>Business connectivity</li><li>Easily upgraded</li><li>Device Independent</li><br><br>
+<b>Q113) What are the deployment models using in Cloud?</b><br>
+Answer:<br><li>Private Cloud</li><li>Public Cloud</li><li>Hybrid cloud</li><li>Community cloud 4</li><br><br>
+<b>Q114) Explain Cloud Service Models?</b><br>
+<b>Answer: </b>SAAS (Software as a Service): It is software distribution model in which application are hosted by a vendor over the internet for the end user freeing from complex software and hardware management. (Ex: Google drive, drop box)<br>
+PAAS (Platform as a Service): It provides platform and environment to allow developers to build applications. It frees developers without going into the complexity of building and maintaining the infrastructure. (Ex: AWS Elastic Beanstalk, Windows Azure)<br>
+IAAS (Infrastructure as a Service): It provides virtualized computing resources over the internet like CPU, memory, switches, routers, firewall, DNS, Load balancer (Ex: Azure, AWS)<br><br>
+<b>Q115) What are the advantage of Cloud Computing?</b><br>
+Answer:<br><li>Pay per use</li><li>Scalability</li><li>Elasticity</li><li>High Availability</li><li>Increase speed and Agility</li><li>Go global in Minutes</li><br>
+<b>Q116) What is AWS?</b><br>
+<b>Answer: </b>Amazon web service is a secure cloud services platform offering compute, power, database, storage, content delivery and other functionality to help business scale and grow.<br>
+AWS is fully on-demand<br>
+AWS is Flexibility, availability and Scalability<br>
+AWS is Elasticity: scale up and scale down as needed.<br><br>
+<b>Q117) What is mean by Region, Availability Zone and Edge Location?</b><br>
+<b>Answer: </b>Region: An independent collection of AWS resources in a defined geography. A collection of Data centres (Availability zones). All availability zones in a region connected by high bandwidth.<br>
+Availability Zones: An Availability zone is a simply a data centre. Designed as independent failure zone. High speed connectivity, Low latency.<br>
+Edge Locations: Edge location are the important part of AWS Infrastructure. Edge locations are CDN endpoints for cloud front to deliver content to end user with low latency<br><br>
+<b>Q118) How to access AWS Platform?</b><br>
+Answer:<br><li>AWS Console</li><li>AWS CLI (Command line interface) </li><li>AWS SDK (Software Development Kit) </li><br>
+<b>Q119) What is EC2? What are the benefits in EC2?</b><br>
+Amazon Elastic compute cloud is a web service that provides resizable compute capacity in the cloud. AWS EC2 provides scalable computing capacity in the AWS Cloud. These are the virtual servers also called as an instance. We can use the instances pay per use basis.<br>
+Benefits:<br><li>Easier and Faster</li><li>Elastic and Scalable</li><li>High Availability</li><li>Cost-Effective</li><br>
+<b>Q120) What are the pricing models available in AWS EC2?</b><br>
+Answer:<br>
+<li>On-Demand Instances</li>
+<li>Reserved Instances</li>
+<li>Spot Instances</li>
+<li>Dedicated Host</li><br>
+<b>Q121) What are the types using in AWS EC2?</b><br>
+Answer:<br>
+<li>General Purpose</li>
+<li>Compute Optimized</li>
+<li>Memory optimized</li>
+<li>Storage Optimized</li>
+<li>Accelerated Computing (GPU Based) </li><br>
+<b>Q122) What is AMI? What are the types in AMI?</b><br>
+Answer:<br>
+Amazon machine image is a special type of virtual appliance that is used to create a virtual machine within the amazon Elastic compute cloud. AMI defines the initial software that will be in an instance when it is launched.<br>
+Types of AMI:<br>
+<li>Published by AWS</li>
+<li>AWS Marketplace</li>
+<li>Generated from existing instances</li>
+<li>Uploaded virtual server</li><br>
+<b>Q123) How to Addressing AWS EC2 instances?</b><br>
+<b>Answer: </b><br>
+<li>Public Domain name system (DNS) name: When you launch an instance, AWS creates a DNS name that can be used to access the<br>
+<li>Public IP: A launched instance may also have a public IP address This IP address assigned from the address reserved by AWS and cannot be specified.<br>
+<li>Elastic IP: An Elastic IP Address is an address unique on the internet that you reserve independently and associate with Amazon EC2 instance. This IP Address persists until the customer release it and is not tried to<br><br>
+<b>Q124) What is Security Group?</b><br>
+<b>Answer: </b>AWS allows you to control traffic in and out of your instance through virtual firewall called Security groups. Security groups allow you to control traffic based on port, protocol and source/Destination.<br><br>
+<b>Q125) When your instance shows retired state?</b><br>
+<b>Answer: </b>Retired state only available in Reserved instances. Once the reserved instance reserving time (1 yr./3 yr.) ends it shows Retired state.<br><br>
+<b>Q126) Scenario: My EC2 instance IP address change automatically while instance stop and start. What is the reason for that and explain solution?</b><br>
+<b>Answer: </b>AWS assigned Public IP automatically, but it’s changes dynamically while stop and start. In that case we need to assign Elastic IP for that instance, once assigned it doesn’t change automatically.<br><br>
+<b>Q127) What is Elastic Beanstalk?</b><br>
+<b>Answer: </b>AWS Elastic Beanstalk is the fastest and simplest way to get an application up and running on AWS. Developers can simply upload their code and the service automatically handle all the details such as resource provisioning, load balancing, Auto scaling and Monitoring.<br><br>
+<b>Q128) What is Amazon LightSail?</b><br>
+<b>Answer: </b>LightSail designed to be the easiest way to launch and manage a virtual private server with AWS. LightSail plans include everything you need to jumpstart your project a virtual machine, SSD based storage, data transfer, DNS Management and a static IP.<br><br>
+<b>Q129) What is EBS?</b><br>
+<b>Answer: </b>Amazon EBS Provides persistent block level storage volumes for use with Amazon EC2 instances. Amazon EBS volume is automatically replicated with its availability zone to protect component failure offering high availability and durability. Amazon EBS volumes are available in a variety of types that differ in performance characteristics and Price.<br><br>
+<b>Q130) How to compare EBS Volumes?</b><br>
+<b>Answer: </b>Magnetic Volume: Magnetic volumes have the lowest performance characteristics of all Amazon EBS volume types.<br>
+EBS Volume size: 1 GB to 1 TB Average IOPS: 100 IOPS Maximum throughput: 40-90 MB<br>
+General-Purpose SSD: General purpose SSD volumes offers cost-effective storage that is ideal for a broad range of workloads. General purpose SSD volumes are billed based on the amount of data space provisioned regardless of how much of data you store on the volume.<br>
+EBS Volume size: 1 GB to 16 TB Maximum IOPS: up to 10000 IOPS Maximum throughput: 160 MB<br>
+Provisioned IOPS SSD: Provisioned IOPS SSD volumes are designed to meet the needs of I/O intensive workloads, particularly database workloads that are sensitive to storage performance and consistency in random access I/O throughput. Provisioned IOPS SSD Volumes provide predictable, High performance.<br>
+EBS Volume size: 4 GB to 16 TB Maximum IOPS: up to 20000 IOPS Maximum throughput: 320 MB<br><br>
+<b>Q131) What is cold HDD and Throughput-optimized HDD?</b><br>
+<b>Answer: </b>Cold HDD: Cold HDD volumes are designed for less frequently accessed workloads. These volumes are significantly less expensive than throughput-optimized HDD volumes.<br>
+EBS Volume size: 500 GB to 16 TB Maximum IOPS: 200 IOPS Maximum throughput: 250 MB<br>
+Throughput-Optimized HDD: Throughput-optimized HDD volumes are low cost HDD volumes designed for frequent access, throughput-intensive workloads such as big data, data warehouse.<br>
+EBS Volume size: 500 GB to 16 TB Maximum IOPS: 500 IOPS Maximum throughput: 500 MB<br><br>
+<b>Q132) What is Amazon EBS-Optimized instances?</b><br>
+<b>Answer: </b>Amazon EBS optimized instances to ensure that the Amazon EC2 instance is prepared to take advantage of the I/O of the Amazon EBS Volume. An amazon EBS-optimized instance uses an optimized configuration stack and provide additional dedicated capacity for Amazon EBS I/When you select Amazon EBS-optimized for an instance you pay an additional hourly charge for that instance.<br><br>
+<b>Q133) What is EBS Snapshot?</b><br>
+<b>Answer: </b><br>
+<li>It can back up the data on the EBS Volume. Snapshots are incremental backups.</li>
+<li>If this is your first snapshot it may take some time to create. Snapshots are point in time copies of volumes.</li><br>
+<b>Q134) How to connect EBS volume to multiple instance?</b><br>
+<b>Answer: </b>We can’t able to connect EBS volume to multiple instance, but we can able to connect multiple EBS Volume to single instance.<br><br>
+<b>Q135) What are the virtualization types available in AWS?</b><br>
+<b>Answer: </b>Hardware assisted Virtualization: HVM instances are presented with a fully virtualized set of hardware and they executing boot by executing master boot record of the root block device of the image. It is default Virtualization.<br>
+Para virtualization: This AMI boot with a special boot loader called PV-GRUB. The ability of the guest kernel to communicate directly with the hypervisor results in greater performance levels than other virtualization approaches but they cannot take advantage of hardware extensions such as networking, GPU etc. Its customized Virtualization images. Virtualization image can be used only for service.<br><br>
+<b>Q136) Differentiate Block storage and File storage?</b><br>
+<b>Answer: </b>Block Storage: Block storage operates at lower level, raw storage device level and manages data as a set of numbered, fixed size blocks.<br>
+File Storage: File storage operates at a higher level, the operating system level and manage data as a named hierarchy of files and folders.<br><br>
+<b>Q137) What are the advantage and disadvantage of EFS? Advantages</b><br>
+<b>Answer: </b><br>
+<li>Fully managed service</li>
+<li>File system grows and shrinks automatically to petabytes</li>
+<li>Can support thousands of concurrent connections</li>
+<li>Multi AZ replication</li>
+<li>Throughput scales automatically to ensure consistent low latency Disadvantages:</li>
+<li>Not available in all region</li>
+<li>Cross region capability not available</li>
+<li>More complicated to provision compared to S3 and EBS</li><br>
+<b>Q138) What are the things we need to remember while creating s3 bucket?</b><br>
+<b>Answer: </b><br>
+<li>Amazon S3 and Bucket names are</li>
+<li>This means bucket names must be unique across all AWS</li>
+<li>Bucket names can contain up to 63 lowercase letters, numbers, hyphens and</li>
+<li>You can create and use multiple buckets</li>
+<li>You can have up to 100 per account by</li><br>
+<b>Q139) What are the storage class available in Amazon s3?</b><br>
+<b>Answer: </b><br>
+<li>Amazon S3 Standard</li>
+<li>Amazon S3 Standard-Infrequent Access</li>
+<li>Amazon S3 Reduced Redundancy Storage</li>
+<li>Amazon Glacier</li><br>
+<b>Q140) Explain Amazon s3 lifecycle rules?</b><br>
+<b>Answer: </b>Amazon S3 lifecycle configuration rules, you can significantly reduce your storage costs by automatically transitioning data from one storage class to another or even automatically delete data after a period.<br>
+<li>Store backup data initially in Amazon S3 Standard</li>
+<li>After 30 days, transition to Amazon Standard IA</li>
+<li>After 90 days, transition to Amazon Glacier</li>
+<li>After 3 years, delete</li><br>
+<b>Q141) What is the relation between Amazon S3 and AWS KMS?</b><br>
+<b>Answer: </b>To encrypt Amazon S3 data at rest, you can use several variations of Server-Side Encryption. Amazon S3 encrypts your data at the object level as it writes it to disks in its data centres and decrypt it for you when you access it’ll SSE performed by Amazon S3 and AWS Key Management Service (AWS KMS) uses the 256-bit Advanced Encryption Standard (AES) .<br><br>
+<b>Q142) What is the function of cross region replication in Amazon S3?</b><br>
+<b>Answer: </b>Cross region replication is a feature allows you asynchronously replicate all new objects in the source bucket in one AWS region to a target bucket in another region. To enable cross-region replication, versioning must be turned on for both source and destination buckets. Cross region replication is commonly used to reduce the latency required to access objects in Amazon S3<br><br>
+<b>Q143) How to create Encrypted EBS volume?</b><br>
+<b>Answer: </b>You need to select Encrypt this volume option in Volume creation page. While creation a new master key will be created unless you select a master key that you created separately in the service. Amazon uses the AWS key management service (KMS) to handle key management.<br><br>
+<b>Q144) Explain stateful and Stateless firewall.</b><br>
+<b>Answer: </b>Stateful Firewall: A Security group is a virtual stateful firewall that controls inbound and outbound network traffic to AWS resources and Amazon EC2 instances. Operates at the instance level. It supports allow rules only. Return traffic is automatically allowed, regardless of any rules.<br>
+Stateless Firewall: A Network access control List (ACL) is a virtual stateless firewall on a subnet level. Supports allow rules and deny rules. Return traffic must be explicitly allowed by rules.<br><br>
+<b>Q145) What is NAT Instance and NAT Gateway?</b><br>
+<b>Answer: </b>NAT instance: A network address translation (NAT) instance is an Amazon Linux machine Image (AMI) that is designed to accept traffic from instances within a private subnet, translate the source IP address to the Public IP address of the NAT instance and forward the traffic to IWG.<br>
+NAT Gateway: A NAT gateway is an Amazon managed resources that is designed to operate just like a NAT instance, but it is simpler to manage and highly available within an availability Zone. To allow instance within a private subnet to access internet resources through the IGW via a NAT gateway.<br><br>
+<b>Q146) What is VPC Peering?</b><br>
+<b>Answer: </b>Amazon VPC peering connection is a networking connection between two amazon VPC’s that enables instances in either Amazon VPC to communicate with each other as if they are within the same network. You can create amazon VPC peering connection between your own Amazon VPC’s or Amazon VPC in another AWS account within a single region.<br><br>
+<b>Q147) What is MFA in AWS?</b><br>
+<b>Answer: </b>Multi factor Authentication can add an extra layer of security to your infrastructure by adding a second method of authentication beyond just password or access key.<br><br>
+<b>Q148) What are the Authentication in AWS?</b><br>
+<b>Answer: </b><br>
+<li>Username/Password</li>
+<li>Access Key</li>
+<li>Access Key/ Session Token</li><br>
+<b>Q149) What is Data warehouse in AWS?</b><br>
+Data warehouse is a central repository for data that can come from one or more sources. Organization typically use data warehouse to compile reports and search the database using highly complex queries. Data warehouse also typically updated on a batch schedule multiple times per day or per hour compared to an OLTP (Online Transaction Processing) relational database that can be updated thousands of times per second.<br><br>
+<b>Q150) What is mean by Multi-AZ in RDS?</b><br>
+<b>Answer: </b>Multi AZ allows you to place a secondary copy of your database in another availability zone for disaster recovery purpose. Multi AZ deployments are available for all types of Amazon RDS Database engines. When you create s Multi-AZ DB instance a primary instance is created in one Availability Zone and a secondary instance is created by another Availability zone.<br><br>
+<b>Q151) What is Amazon Dynamo DB?</b><br>
+<b>Answer: </b>Amazon Dynamo DB is fully managed NoSQL database service that provides fast and predictable performance with seamless scalability. Dynamo DB makes it simple and Cost effective to store and retrieve any amount of data.<br><br>
+<b>Q152) What is cloud formation?</b><br>
+<b>Answer: </b>Cloud formation is a service which creates the AWS infrastructure using code. It helps to reduce time to manage resources. We can able to create our resources Quickly and faster.<br><br>
+<b>Q153) How to plan Auto scaling?</b><br>
+<b>Answer: </b><br>
+<li>Manual Scaling</li>
+<li>Scheduled Scaling</li>
+<li>Dynamic Scaling</li><br>
+<b>Q154) What is Auto Scaling group?</b><br>
+<b>Answer: </b>Auto Scaling group is a collection of Amazons EC2 instances managed by the Auto scaling service. Each auto scaling group contains configuration options that control when auto scaling should launch new instance or terminate existing instance.<br><br>
+<b>Q155) Differentiate Basic and Detailed monitoring in cloud watch?</b><br>
+<b>Answer: </b>Basic Monitoring: Basic monitoring sends data points to Amazon cloud watch every five minutes for a limited number of preselected metrics at no charge.<br>
+Detailed Monitoring: Detailed monitoring sends data points to amazon CloudWatch every minute and allows data aggregation for an additional charge.<br><br>
+<b>Q156) What is the relationship between Route53 and Cloud front?</b><br>
+<b>Answer: </b>In Cloud front we will deliver content to edge location wise so here we can use Route 53 for Content Delivery Network. Additionally, if you are using Amazon CloudFront you can configure Route 53 to route Internet traffic to those resources.<br><br>
+<b>Q157) What are the routing policies available in Amazon Route53?</b><br>
+<b>Answer: </b><br>
+<li>Simple</li>
+<li>Weighted</li>
+<li>Latency Based</li>
+<li>Failover</li>
+<li>Geolocation</li><br>
+<b>Q158) What is Amazon ElastiCache?</b><br>
+<b>Answer: </b>Amazon ElastiCache is a web services that simplifies the setup and management of distributed in memory caching environment.<br>
+<li>Cost Effective</li>
+<li>High Performance</li>
+<li>Scalable Caching Environment</li>
+<li>Using Memcached or Redis Cache Engine</li><br>
+<b>Q159) What is SES, SQS and SNS?</b><br>
+<b>Answer: </b>SES (Simple Email Service): SES is SMTP server provided by Amazon which is designed to send bulk mails to customers in a quick and cost-effective manner. SES does not allows to configure mail server.<br>
+SQS (Simple Queue Service): SQS is a fast, reliable and scalable, fully managed message queuing service. Amazon SQS makes it simple and cost Effective. It’s temporary repository for messages to waiting for processing and acts as a buffer between the component producer and the consumer.<br>
+SNS (Simple Notification Service): SNS is a web service that coordinates and manages the delivery or sending of messages to recipients.<br><br>
+<b>Q160) How to Use Amazon SQS? What is Aws?</b><br>
+<b>Answer: </b>Amazon Web Services is a secure cloud services stage, offering compute power, database storage, content delivery and other functionality to help industries scale and grow.<br><br>
+<b>Q161) What is the importance of buffer in AWS?</b><br>
+<b>Answer: </b>low price: Consume only the amount of calculating, storage and other IT devices needed. No long-term assignation, minimum spend, or up-front expenditure is required.<br>
+Elastic and Scalable: Quickly Rise and decrease resources to applications to satisfy customer demand and control costs. Avoid provisioning maintenance up-front for plans with variable consumption speeds or low lifetimes.<br><br>
+<b>Q162) What is the way to secure data for resounding in the cloud?</b><br>
+<b>Answer: </b><br>
+<li>Avoid storage sensitive material in the cloud.</li>
+<li>Read the user contract to find out how your cloud service storing works.</li>
+<li>Be serious about passwords.</li>
+<li>Encrypt.</li>
+<li>Use an encrypted cloud service.</li><br>
+<b>Q163) Name the Several Layers of Cloud Computing?</b><br>
+<b>Answer: </b>Cloud computing can be damaged up into three main services: Software-as-a-Service (SaaS), Infrastructure-as-a-Service (IaaS) and Platform-as-a-Service (PaaS). PaaS in the middle, and IaaS on the lowest<br><br>
+<b>Q164) What Is Lambda Edge in Aws?</b><br>
+<b>Answer: </b>Lambda Edge lets you run Lambda functions to modify satisfied that Cloud Front delivers, executing the functions in AWS locations closer to the viewer. The functions run in response to Cloud Front events, without provisioning or managing server.<br><br>
+<b>Q165) Distinguish Between Scalability and Flexibility?</b><br>
+<b>Answer: </b>Cloud computing offers industries flexibility and scalability when it comes to computing needs:<br>
+Flexibility. Cloud computing agrees your workers to be more flexible: both in and out of the workplace. Workers can access files using web-enabled devices such as smartphones, laptops and notebooks. In this way, cloud computing empowers the use of mobile technology.<br>
+One of the key assistances of using cloud computing is its scalability. Cloud computing allows your business to easily expensive or downscale your IT requests as and when required. For example, most cloud service workers will allow you to increase your existing resources to accommodate increased business needs or changes. This will allow you to support your commercial growth without exclusive changes to your present IT systems.<br><br>
+<b>Q166) What is IaaS?</b><br>
+<b>Answer: </b>IaaS is a cloud service that runs services on “pay-for-what-you-use” basis<br>
+IaaS workers include Amazon Web Services, Microsoft Azure and Google Compute Engine<br>
+Users: IT Administrators<br><br>
+<b>Q167) What is PaaS?</b><br>
+<b>Answer: </b>PaaS runs cloud platforms and runtime environments to develop, test and manage software<br>
+Users: Software Developers<br><br>
+<b>Q168) What is SaaS?</b><br>
+<b>Answer: </b>In SaaS, cloud workers host and manage the software application on a pay-as-you-go pricing model<br>
+Users: End Customers<br><br>
+<b>Q169) Which Automation Gears Can Help with Spin up Services?</b><br>
+<b>Answer: </b>The API tools can be used for spinning up services and for the written scripts. Persons scripts could be coded in Perl, bash or other languages of your preference. There is one more option that is flowery management and stipulating tools such as a dummy or improved descendant. A tool called Scalar can also be used and finally we can go with a controlled explanation like a Right scale. Which automation gears can help with pinup service.<br><br>
+<b>Q170) What Is an Ami? How Do I Build One?</b><br>
+<b>Answer: </b>An Amazon Machine Image (AMI) explains the programs and settings that will be applied when you launch an EC2 instance. Once you have finished organizing the data, services, and submissions on your ArcGIS Server instance, you can save your work as a custom AMI stored in Amazon EC2. You can scale out your site by using this institution AMI to launch added instances<br>
+Use the following process to create your own AMI using the AWS Administration Console:<br>
+Configure an EC2 example and its attached EBS volumes in the exact way you want them created in the custom AMI.<br>
+1.	Log out of your instance, but do not stop or terminate it.<br>
+2.	Log in to the AWS Management Console, display the EC2 page for your region, then click Instances.<br>
+3.	Choose the instance from which you want to create a custom AMI.<br>
+4.	Click Actions and click Create Image.<br>
+5.	Type a name for Image Name that is easily identifiable to you and, optionally, input text for Image Description.<br>
+6.	Click Create Image.<br>
+Read the message box that appears. To view the AMI standing, go to the AMIs page. Here you can see your AMI being created. It can take a though to create the AMI. Plan for at least 20 minutes, or slower if you’ve connected a lot of additional applications or data.<br><br>
+<b>Q171) What Are the Main Features of Amazon Cloud Front?</b><br>
+<b>Answer: </b>Amazon Cloud Front is a web service that speeds up delivery of your static and dynamic web content, such as .html, .css, .js, and image files, to your users. CloudFront delivers your content through a universal network of data centres called edge locations<br><br>
+<b>Q172) What Are the Features of The Amazon Ec2 Service?</b><br>
+<b>Answer: </b>Amazon Elastic Calculate Cloud (Amazon EC2) is a web service that provides secure, resizable compute capacity in the cloud. It is designed to make web-scale cloud calculating easier for designers. Amazon EC2’s simple web service interface allows you to obtain and configure capacity with minimal friction.<br><br>
+<b>Q173) Explain Storage for Amazon Ec2 Instance.?</b><br>
+<b>Answer: </b>An instance store is a provisional storing type located on disks that are physically attached to a host machine. This article will present you to the AWS instance store storage type, compare it to AWS Elastic Block Storage (AWS EBS), and show you how to backup data stored on instance stores to AWS EBS<br>
+Amazon SQS is a message queue service used by scattered requests to exchange messages through a polling model, and can be used to decouple sending and receiving components<br><br>
+<b>Q174) When attached to an Amazon VPC which two components provide connectivity with external networks?</b><br>
+<b>Answer: </b><br>
+<li>Internet Gateway (IGW) </li>
+<li>Virtual Private Gateway (VGW)</li><br>
+<b>Q175) Which of the following are characteristics of Amazon VPC subnets?</b><br>
+<b>Answer: </b><br>
+<li>Each subnet maps to a single Availability Zone.</li>
+<li>By defaulting, all subnets can route between each other, whether they are private or public.</li><br>
+<b>Q176) How can you send request to Amazon S3?</b><br>
+<b>Answer: </b>Every communication with Amazon S3 is either genuine or anonymous. Authentication is a process of validating the individuality of the requester trying to access an Amazon Web Services (AWS) product. Genuine requests must include an autograph value that authenticates the request sender. The autograph value is, in part, created from the requester’s AWS access keys (access key identification and secret access key).<br><br>
+<b>Q177) What is the best approach to anchor information for conveying in the cloud?</b><br>
+<b>Answer: </b>Backup Data Locally. A standout amongst the most vital interesting points while overseeing information is to guarantee that you have reinforcements for your information,<br>
+<li>Avoid Storing Sensitive Information.</li>
+<li>Use Cloud Services that Encrypt Data.</li>
+<li>Encrypt Your Data.</li>
+<li>Install Anti-infection Software.</li>
+<li>Make Passwords Stronger.</li>
+<li>Test the Security Measures in Place.</li><br>
+<b>Q178) What is AWS Certificate Manager?</b><br>
+<b>Answer: </b>AWS Certificate Manager is an administration that lets you effortlessly arrangement, oversee, and send open and private Secure Sockets Layer/Transport Layer Security (SSL/TLS) endorsements for use with AWS administrations and your inward associated assets. SSL/TLS declarations are utilized to anchor arrange interchanges and set up the character of sites over the Internet and additionally assets on private systems. AWS Certificate Manager expels the tedious manual procedure of obtaining, transferring, and re-establishing SSL/TLS endorsements.<br><br>
+<b>Q179) What is the AWS Key Management Service<br>
+<b>Answer: </b>AWS Key Management Service (AWS KMS) is an overseen benefit that makes it simple for you to make and control the encryption keys used to scramble your information. AWS KMS is additionally coordinated with AWS CloudTrail to give encryption key use logs to help meet your inspecting, administrative and consistence needs.</b><br><br>
+<b>Q180) What is Amazon EMR?</b><br>
+<b>Answer: </b>Amazon Elastic MapReduce (EMR) is one such administration that gives completely oversaw facilitated Hadoop system over Amazon Elastic Compute Cloud (EC2).<br><br>
+<b>Q181) What is Amazon Kinesis Firehose?</b><br>
+<b>Answer: </b>Amazon Kinesis Data Firehose is the least demanding approach to dependably stack gushing information into information stores and examination devices. It is a completely overseen benefit that consequently scales to coordinate the throughput of your information and requires no continuous organization<br><br>
+<b>Q182) What Is Amazon CloudSearch and its highlights?</b><br>
+<b>Answer: </b>Amazon CloudSearch is a versatile cloud-based hunt benefit that frames some portion of Amazon Web Services (AWS). CloudSearch is normally used to incorporate tweaked seek abilities into different applications. As indicated by Amazon, engineers can set a pursuit application up and send it completely in under 60 minutes.<br><br>
+<b>Q183) Is it feasible for an EC2 exemplary occurrence to wind up an individual from a virtual private cloud?</b><br>
+<b>Answer: </b>Amazon Virtual Private Cloud (Amazon VPC) empowers you to characterize a virtual system in your very own consistently disengaged zone inside the AWS cloud, known as a virtual private cloud (VPC). You can dispatch your Amazon EC2 assets, for example, occasions, into the subnets of your VPC. Your VPC nearly looks like a conventional system that you may work in your very own server farm, with the advantages of utilizing adaptable foundation from AWS. You can design your VPC; you can choose its IP address extend, make subnets, and arrange course tables, organize portals, and security settings. You can interface occurrences in your VPC to the web or to your own server farm<br><br>
+<b>Q184) Mention crafted by an Amazon VPC switch.</b><br>
+<b>Answer: </b>VPCs and Subnets. A virtual private cloud (VPC) is a virtual system committed to your AWS account. It is consistently segregated from other virtual systems in the AWS Cloud. You can dispatch your AWS assets, for example, Amazon EC2 cases, into your VPC.<br><br>
+<b>Q185) How would one be able to associate a VPC to corporate server farm?</b><br>
+<b>Answer: </b>AWS Direct Connect empowers you to safely associate your AWS condition to your on-premises server farm or office area over a standard 1 gigabit or 10 gigabit Ethernet fiber-optic association. AWS Direct Connect offers committed fast, low dormancy association, which sidesteps web access suppliers in your system way. An AWS Direct Connect area gives access to Amazon Web Services in the locale it is related with, and access to different US areas. AWS Direct Connect enables you to consistently parcel the fiber-optic associations into numerous intelligent associations called Virtual Local Area Networks (VLAN). You can exploit these intelligent associations with enhance security, separate traffic, and accomplish consistence necessities.<br><br>
+<b>Q186) Is it conceivable to push off S3 with EC2 examples?</b><br>
+<b>Answer: </b>Truly, it very well may be pushed off for examples with root approaches upheld by local event stockpiling. By utilizing Amazon S3, engineers approach the comparative to a great degree versatile, reliable, quick, low-valued information stockpiling substructure that Amazon uses to follow its own overall system of sites. To perform frameworks in the Amazon EC2 air, engineers utilize the instruments giving to stack their Amazon Machine Images (AMIs) into Amazon S3 and to exchange them between Amazon S3 and Amazon EC2. Extra use case may be for sites facilitated on EC2 to stack their stationary substance from S3.<br><br>
+<b>Q187) What is the distinction between Amazon S3 and EBS?</b><br>
+<b>Answer: </b>EBS is for mounting straightforwardly onto EC2 server examples. S3 is Object Oriented Storage that isn’t continually waiting be gotten to (and is subsequently less expensive). There is then much less expensive AWS Glacier which is for long haul stockpiling where you don’t generally hope to need to get to it, however, wouldn’t have any desire to lose it.<br>
+There are then two principle kinds of EBS: HDD (Hard Disk Drives, i.e. attractive turning circles), which are genuinely ease back to access, and SSD, which are strong state drives which are excessively quick to get to, yet increasingly costly.<br>
+<li>Finally, EBS can be purchased with or without Provisioned IOPS.</li>
+<li>Obviously, these distinctions accompany related estimating contrasts, so it merits focusing on the distinctions and utilize the least expensive that conveys the execution you require.</li><br>
+<b>Q188) What do you comprehend by AWS?</b><br>
+<b>Answer: </b>This is one of the generally asked AWS engineer inquiries questions. This inquiry checks your essential AWS learning so the appropriate response ought to be clear. Amazon Web Services (AWS) is a cloud benefit stage which offers figuring power, investigation, content conveyance, database stockpiling, sending and some different administrations to help you in your business development. These administrations are profoundly versatile, solid, secure, and cheap distributed computing administrations which are plotted to cooperate and, applications in this manner made are further developed and escalade.<br><br>
+<b>Q189) Clarify the principle components of AWS?</b><br>
+<b>Answer: </b>The principle components of AWS are:<br>
+Highway 53: Route53 is an exceptionally versatile DNS web benefit.<br>
+Basic Storage Service (S3): S3 is most generally utilized AWS stockpiling web benefit.<br>
+Straightforward E-mail Service (SES): SES is a facilitated value-based email benefit and enables one to smoothly send deliverable messages utilizing a RESTFUL API call or through an ordinary SMTP.<br>
+Personality and Access Management (IAM): IAM gives enhanced character and security the board for AWS account.<br>
+Versatile Compute Cloud (EC2): EC2 is an AWS biological community focal piece. It is in charge of giving on-request and adaptable processing assets with a “pay as you go” estimating model.<br>
+Flexible Block Store (EBS): EBS offers consistent capacity arrangement that can be found in occurrences as a customary hard drive.<br>
+CloudWatch: CloudWatch enables the controller to viewpoint and accumulate key measurements and furthermore set a progression of cautions to be advised if there is any inconvenience.<br>
+This is among habitually asked AWS engineer inquiries questions. Simply find the questioner psyche and solution appropriately either with parts name or with the portrayal alongside.<br><br>
+<b>Q190) I’m not catching your meaning by AMI? What does it incorporate?</b><br>
+<b>Answer: </b>You may run over at least one AMI related AWS engineer inquiries amid your AWS designer meet. Along these lines, set yourself up with a decent learning of AMI.<br>
+AMI represents the term Amazon Machine Image. It’s an AWS format which gives the data (an application server, and working framework, and applications) required to play out the dispatch of an occasion. This AMI is the duplicate of the AMI that is running in the cloud as a virtual server. You can dispatch occurrences from the same number of various AMIs as you require. AMI comprises of the followings:<br>
+A pull volume format for a current example<br>
+Launch authorizations to figure out which AWS records will inspire the AMI so as to dispatch the occasions<br>
+Mapping for square gadget to compute the aggregate volume that will be appended to the example at the season of dispatch<br><br>
+<b>Q191) Is vertically scale is conceivable on Amazon occurrence?</b><br>
+<b>Answer: </b>Indeed, vertically scale is conceivable on Amazon example.<br>
+This is one of the normal AWS engineer inquiries questions. In the event that the questioner is hoping to find a definite solution from you, clarify the system for vertical scaling.<br><br>
+<b>Q192) What is the association among AMI and Instance?</b><br>
+<b>Answer: </b>Various sorts of examples can be propelled from one AMI. The sort of an occasion for the most part manages the equipment segments of the host PC that is utilized for the case. Each kind of occurrence has unmistakable registering and memory adequacy.<br>
+When an example is propelled, it gives a role as host and the client cooperation with it is same likewise with some other PC however, we have a totally controlled access to our occurrences. AWS engineer inquiries questions may contain at least one AMI based inquiries, so set yourself up for the AMI theme exceptionally well.<br><br>
+<b>Q193) What is the distinction between Amazon S3 and EC2?</b><br>
+<b>Answer: </b>The contrast between Amazon S3 and EC2 is given beneath:<br>
+Amazon S3<br>
+Amazon EC2<br>
+The significance of S3 is Simple Storage Service. The importance of EC2 is Elastic Compute Cloud.<br>
+It is only an information stockpiling administration which is utilized to store huge paired files. It is a cloud web benefit which is utilized to have the application made.<br>
+It isn’t required to run a server. It is sufficient to run a server.<br>
+It has a REST interface and utilizations secure HMAC-SHA1 validation keys. It is much the same as a tremendous PC machine which can deal with application like Python, PHP, Apache and some other database.<br>
+When you are going for an AWS designer meet, set yourself up with the ideas of Amazon S3 and EC2, and the distinction between them.<br><br>
+<b>Q194) What number of capacity alternatives are there for EC2 Instance?</b><br>
+<b>Answer: </b>There are four stockpiling choices for Amazon EC2 Instance:<br>
+<li>Amazon EBS</li>
+<li>Amazon EC2 Instance Store</li>
+<li>Amazon S3</li>
+<li>Adding Storage</li>
+Amazon EC2 is the basic subject you may run over while experiencing AWS engineer inquiries questions. Get a careful learning of the EC2 occurrence and all the capacity alternatives for the EC2 case.<br><br>
+<b>Q195) What are the security best practices for Amazon Ec2 examples?</b><br>
+<b>Answer: </b>There are various accepted procedures for anchoring Amazon EC2 occurrences that are pertinent whether occasions are running on-preface server farms or on virtual machines. How about we view some broad prescribed procedures:<br>
+Minimum Access: Make beyond any doubt that your EC2 example has controlled access to the case and in addition to the system. Offer access specialists just to the confided in substances.<br>
+Slightest Privilege: Follow the vital guideline of minimum benefit for cases and clients to play out the capacities. Produce jobs with confined access for the occurrences.<br>
+Setup Management: Consider each EC2 occasion a design thing and use AWS arrangement the executive’s administrations to have a pattern for the setup of the occurrences as these administrations incorporate refreshed enemy of infection programming, security highlights and so forth.<br>
+Whatever be the activity job, you may go over security-based AWS inquiries questions. Along these lines, motivate arranged with this inquiry to break the AWS designer meet.<br><br>
+<b>Q196) Clarify the highlights of Amazon EC2 administrations.</b><br>
+<b>Answer: </b>Amazon EC2 administrations have following highlights:<br>
+<li>Virtual Computing Environments</li>
+<li>Proffers Persistent capacity volumes</li>
+<li>Firewall approving you to indicate the convention</li>
+<li>Pre-designed layouts</li>
+<li>Static IP address for dynamic Cloud Computing</li><br>
+<b>Q197) What is the system to send a demand to Amazon S3?</b><br>
+<b>Answer: </b>Reply: There are 2 different ways to send a demand to Amazon S3:<br>
+<li>Using REST API</li>
+<li>Using AWS SDK Wrapper Libraries, these wrapper libraries wrap the REST APIs for Amazon</li><br>
+<b>Q198) What is the default number of basins made in AWS?</b><br>
+<b>Answer: </b>This is an extremely straightforward inquiry yet positions high among AWS engineer inquiries questions. Answer this inquiry straightforwardly as the default number of pails made in each AWS account is 100.<br><br>
+<b>Q199) What is the motivation behind T2 examples?</b><br>
+<b>Answer: </b>T2 cases are intended for<br>
+Providing moderate gauge execution<br>
+Higher execution as required by outstanding task at hand<br><br>
+<b>Q200) What is the utilization of the cradle in AWS?</b><br>
+<b>Answer: </b>This is among habitually asked AWS designer inquiries questions. Give the appropriate response in straightforward terms, the cradle is primarily used to oversee stack with the synchronization of different parts i.e. to make framework blame tolerant. Without support, segments don’t utilize any reasonable technique to get and process demands. Be that as it may, the cushion makes segments to work in a decent way and at a similar speed, hence results in quicker administrations.<br><br>
+<b>Q201) What happens when an Amazon EC2 occurrence is halted or ended?</b><br>
+<b>Answer: </b>At the season of ceasing an Amazon EC2 case, a shutdown is performed in a typical way. From that point onward, the changes to the ceased state happen. Amid this, the majority of the Amazon EBS volumes are stayed joined to the case and the case can be begun whenever. The occurrence hours are not included when the occasion is the ceased state.<br>
+At the season of ending an Amazon EC2 case, a shutdown is performed in an ordinary way. Amid this, the erasure of the majority of the Amazon EBS volumes is performed. To stay away from this, the estimation of credit DeleteOnTermination is set to false. On end, the occurrence additionally experiences cancellation, so the case can’t be begun once more.<br><br>
+<b>Q202) What are the mainstream DevOps devices?</b><br>
+<b>Answer: </b>In an AWS DevOps Engineer talk with, this is the most widely recognized AWS inquiries for DevOps. To answer this inquiry, notice the well-known DevOps apparatuses with the kind of hardware:<br>
+<li>Jenkins: Continuous Integration Tool</li>
+<li>Git: Version Control System Tool</li>
+<li>Nagios: Continuous Monitoring Tool</li>
+<li>Selenium: Continuous Testing Tool</li>
+<li>Docker: Containerization Tool</li>
+<li>Puppet, Chef, Ansible: Deployment and Configuration Administration Tools.</li><br>
+<b>Q203) What are IAM Roles and Policies? What is the difference between IAM Roles and Policies.</b><br>
+<b>Answer: </b>Roles are for AWS services, Where we can assign permission of some AWS service to other Service.<br>
+Example: Giving S3 permission to EC2 to access S3 Bucket Contents.<br>
+Policies are for users and groups, Where we can assign permission to user’s and groups.<br>
+Example: Giving permission to user to access the S3 Buckets.<br><br>
+<b>Q204) What are the Defaults services we get when we create custom AWS VPC?</b><br>
+<b>Answer: </b><br>
+<li>Route Table</li>
+<li>Network ACL</li>
+<li>Security Group</li><br>
+<b>Q205) What is the Difference Between Public Subnet and Private Subnet?</b><br>
+<b>Answer: </b>Public Subnet will have Internet Gateway Attached to its associated Route Table and Subnet, Private Subnet will not have the Internet Gateway Attached to its associated Route Table and Subnet<br>
+Public Subnet will have internet access and Private subnet will not have the internet access directly.<br><br>
+<b>Q206) How do you access the Ec2 which has private IP which is in private Subnet?</b><br>
+<b>Answer: </b>We can access using VPN if the VPN is configured into that Particular VPC where Ec2 is assigned to that VPC in the Subnet. We can access using other Ec2 which has the Public access.<br><br>
+<b>Q207) We have a custom VPC Configured and MYSQL Database server which is in Private Subnet and   we need to update the MYSQL Database Server, What are the Option to do so.</b><br>
+<b>Answer: </b>By using NAT Gateway in the VPC or Launch a NAT Instance (EC2) Configure or Attach the NAT Gateway in Public Subnet (which has Route Table attached to IGW) and attach it to the Route Table which is Already attached to the Private Subnet.<br><br>
+<b>Q209) What are the Difference Between Route53 and ELB?</b><br>
+<b>Answer: </b>Amazon Route 53 will handle DNS servers. Route 53 give you web interface through which the DNS can be managed using Route 53, it is possible to direct and failover traffic. This can be achieved by using DNS Routing Policy.<br>
+One more routing policy is Failover Routing policy. we set up a health check to monitor your application endpoints. If one of the endpoints is not available, Route 53 will automatically forward the traffic to other endpoint.<br>
+Elastic Load Balancing<br>
+ELB automatically scales depends on the demand, so sizing of the load balancers to handle more traffic effectively when it is not required.<br><br>
+<b>Q210) What are the DB engines which can be used in AWS RDS?</b><br>
+<b>Answer: </b><br>
+<li>MariaDB</li>
+<li>MYSQL DB</li>
+<li>MS SQL DB</li>
+<li>PostGre DB</li>
+<li>Oracle DB</li><br>
+<b>Q211) What is Status Checks in AWS Ec2?</b><br>
+<b>Answer: </b>System Status Checks: System Status checks will look into problems with instance which needs AWS help to resolve the issue. When we see system status check failure, you can wait for AWS to resolve the issue, or do it by our self.<br>
+<li>Network connectivity</li>
+<li>System power</li>
+<li>Software issues Data Centre’s</li>
+<li>Hardware issues</li>
+<li>Instance Status Checks: Instance Status checks will look into issues which need our involvement to fix the issue. if status check fails, we can reboot that instance.</li>
+<li>Failed system status checks</li>
+<li>Memory Full</li>
+<li>Corrupted file system</li>
+<li>Kernel issues</li><br>
+<b>Q212) To establish a peering connection between two VPC’s What condition must be met?</b><br>
+<b>Answer: </b><br>
+<li>CIDR Block should overlap</li>
+<li>CIDR Block should not overlap</li>
+<li>VPC should be in the same region</li>
+<li>VPC must belong to same account.</li>
+<li>CIDR block should not overlap between VPC setting up a peering connection. peering connection is allowed within a region, across region, across different account.</li><br>
+<b>Q213) Troubleshooting with EC2 Instances:</b><br>
+<b>Answer: </b>Instance States<br>
+<li>If the instance state is 0/2- there might be some hardware issue</li>
+<li>If the instance state is ½-there might be issue with OS.</li>
+<li>Workaround-Need to restart the instance, if still that is not working logs will help to fix the issue.</li><br>
+<b>Q214) How EC2instances can be resized.</b><br>
+<b>Answer: </b>EC2 instances can be resizable (scale up or scale down) based on requirement<br><br>
+<b>Q215) EBS: its block-level storage volume which we can use after mounting with EC2 instances.</b><br>
+<b>Answer: </b>For types please refer AWS Solution Architect book.<br><br>
+<b>Q216) Difference between EBS, EFS and S3</b><br>
+<b>Answer: </b><br>
+<li>We can access EBS only if its mounted with instance, at a time EBS can be mounted only with one instance.</li>
+<li>EFS can be shared at a time with multiple instances</li>
+<li>S3 can be accessed without mounting with instances</li><br>
+<b>Q217) Maximum number of buckets which can be crated in AWS.</b><br>
+<b>Answer: </b>100 buckets can be created by default in AWS account. To get more buckets additionally you must request Amazon for that.<br><br>
+<b>Q218) Maximum number of EC2 which can be created in VPC.</b><br>
+<b>Answer: </b>Maximum 20 instances can be created in a VPC. we can create 20 reserve instances and request for spot instance as per demand.<br><br>
+<b>Q219) How EBS can be accessed?</b><br>
+<b>Answer: </b>EBS provides high performance block-level storage which can be attached with running EC2 instance. Storage can be formatted and mounted with EC2 instance, then it can be accessed.<br><br>
+<b>Q220) Process to mount EBS to EC2 instance</b><br>
+<b>Answer: </b><br>
+<li>Df:k</li>
+<li>mkfs.ext4 /dev/xvdf<br>
+<li>Fdisk:l</li>
+<li>Mkdir /my5gbdata</li>
+<li>Mount /dev/xvdf /my5gbdata</li><br>
+<b>Q221) How to add volume permanently with instance.</b><br>
+<b>Answer: </b>With each restart volume will get unmounted from instance, to keep this attached need to perform below step<br>
+Cd /etc/fstab<br>
+/dev/xvdf /data ext4 defaults 0<br>
+0 <edit the file system name accordingly><br><br>
+<b>Q222) What is the Difference between the Service Role and SAML Federated Role.</b><br>
+<b>Answer: </b>Service Role are meant for usage of AWS Services and based upon the policies attached to it, it will have the scope to do its task. Example: In case of automation we can create a service, role and attached to it.<br>
+Federated Roles are meant for User Access and getting access to AWS as per designed role. Example: We can have a federated role created for our office employee and corresponding to that a Group will be created in the AD and user will be added to it.<br><br>
+<b>Q223) How many Policies can be attached to a role.</b><br>
+<b>Answer: </b>10 (Soft limit), We can have till 20.<br><br>
+<b>Q224) What are the different ways to access AWS.</b><br>
+<b>Answer: </b>3 Different ways (CLI, Console, SDK)<br><br>
+<b>Q225) How a Root AWS user is different from in IAM User.</b><br>
+<b>Answer: </b>Root User will have access to entire AWS environment, and it will not have any policy attached to it. While IAM User will be able to do its task based on policies attached to it.<br><br>
+<b>Q226) What do you mean by Principal of least privilege in term of IAM.</b><br>
+<b>Answer: </b>Principal of least privilege means to provide the same or equivalent permission to the user/role.<br><br>
+<b>Q227) What is the meaning of non-explicit deny for an IAM User.</b><br>
+<b>Answer: </b>When an IAM user is created and it is not having any policy attached to it, in that case he will not be able to access any of the AWS Service until a policy has been attached to it.<br><br>
+<b>Q228) What is the precedence level between explicit allow and explicit deny.</b><br>
+<b>Answer: </b>Explicit deny will always override Explicit Allow.<br><br>
+<b>Q229) What is the benefit of creating a group in IAM.</b><br>
+<b>Answer: </b>Creation of Group makes the user management process much simpler and user with the same kind of permission can be added in a group and at last addition of a policy will be much simpler to the group in comparison to doing the same thing manually.<br><br>
+<b>Q230) What is the difference between the Administrative Access and Power User Access in term of pre-build policy.</b><br>
+<b>Answer: </b>Administrative Access will have the Full access to AWS resources. While Power User Access will have the Admin access except the user/group management permission.<br><br>
+<b>Q231) What is the purpose of Identity Provider.</b><br>
+<b>Answer: </b>Identity Provider helps in building the trust between the AWS and the Corporate AD environment while we create the Federated role.<br><br>
+<b>Q232) What are the benefits of STS (Security Token Service).</b><br>
+<b>Answer: </b>It help in securing the AWS environment as we need not to embed or distributed the AWS Security credentials in the application. As the credentials are temporary, we need not to rotate them and revoke them.<br><br>
+<b>Q233) What is the benefit of creating the AWS Organization.</b><br>
+<b>Answer: </b>It helps in managing the IAM Policies, creating the AWS Accounts programmatically, helps in managing the payment methods and consolidated billing.<br><br>
+<b>Q234) What is the maximum file length in S3?</b><br>
+<b>Answer: </b>utf-8 1024 bytes<br><br>
+<b>Q235) Which activity cannot be done using autoscaling?</b><br>
+<b>Answer: </b>Maintain fixed running of ec2<br><br>
+<b>Q236) How will you secure data at rest in EBS?</b><br>
+<b>Answer: </b>EBS data is always secure<br><br>
+<b>Q237) What is the maximum size of S3 Bucket?</b><br>
+<b>Answer: </b>5TB<br><br>
+<b>Q238) Can objects in Amazon s3 be delivered through amazon cloud front?</b><br>
+<b>Answer: </b>Yes<br><br>
+<b>Q239) Which service is used to distribute content to end user service using global network of edge location?</b><br>
+<b>Answer: </b>Virtual Private Cloud<br><br>
+<b>Q240) What is ephemeral storage?</b><br>
+<b>Answer: </b>Temporary storage<br><br>
+<b>Q241) What are shards in kinesis AWS services?</b><br>
+<b>Answer: </b>Shards are used to store data in Kinesis.<br><br>
+<b>Q242) Where can you find the ephemeral storage?</b><br>
+<b>Answer: </b>In Instance store service.<br><br>
+<b>Q243) I have some private servers on my premises also I have distributed some of My workload on the public cloud, what is the architecture called?</b><br>
+<b>Answer: </b>Virtual private cloud<br><br>
+<b>Q244) Route 53 can be used to route users to infrastructure outside of AWS. True/false?</b><br>
+<b>Answer: </b>False<br><br>
+<b>Q245) Is simple workflow service one of the valid Simple Notification Service subscribers?</b><br>
+<b>Answer: </b>No<br><br>
+<b>Q246) Which cloud model do Developers and organizations all around the world leverage extensively?</b><br>
+<b>Answer: </b>IAAS-Infrastructure as a service.<br><br>
+<b>Q247) Can cloud front serve content from a non-AWS origin server?</b><br>
+<b>Answer: </b>No<br><br>
+<b>Q248) Is EFS a centralised storage service in AWS?</b><br>
+<b>Answer: </b>Yes<br><br>
+<b>Q249) Which AWS service will you use to collect and process ecommerce data for near real time analysis?</b><br>
+<b>Answer: </b>Both Dynamo DB & Redshift<br><br>
+<b>Q250) A high demand of IOPS performance is expected around 15000.Which EBS volume type would you recommend?</b><br>
+<b>Answer: </b>Provisioned IOPS.<br><br>
+<b>Q251) What are various vendors that provides that cloud computing services?</b><br>
+Below are some of the vendors that provides that cloud services.<br>
+<li>AWS</li>
+<li>Azure</li>
+<li>GCP</li>
+<li>SAP cloud</li>
+<li>Oracle cloud</li>
+<li>Red Hat cloud</li>
+<li>Verizon and so on.</li><br>
+<b>Q252) What is the difference between a user and a role in AWS and under what service does this concept come under?</b><br>
+<b>Answer: </b>A user and a role is used to provide access to the AWS services. When a user is created, you will have credentials for the user but when you create a role, no credentials are created. So, your roles are more secured when compared to the users. This concept comes under the IAM service that deals with the access to the AWS services.<br><br>
+<b>Q253) What are the types of access that you can give to your users?</b><br>
+You can give 2 types of access to your users, programmatic access and console access.<br><br>
+<b>Q254) What are the different instance types we have in EC2?</b><br>
+We have the below type of instance types in EC2,<br>
+<li>General-purpose</li>
+<li>Compute-optimized</li>
+<li>Storage optimized</li>
+<li>Memory-optimized</li>
+<li>Accelerated computing</li><br>
+<b>Q255) What are the pricing models in EC2?</b><br>
+Below are the pricing models in EC2,<br>
+<li>On-demand</li>
+<li>Spot instances</li>
+<li>Scheduled instances</li>
+<li>Reserved instances</li>
+<li>Dedicated instances</li>
+<li>Dedicated hosts</li>
+<li>Saving plans</li>
+<li>Capacity reservations</li><br>
+<b>Q256) What is the difference between Instance store volume and EBS volumes?</b><br>
+Instance store volumes are used for temporary data. That is, the data is available as long as the instance is running. If you stop or terminate the instance, the data is lost.<br>
+EBS volumes are used for persistent data. That is, the data can be made available even when the instance is not running.<br><br>
+<b>Q257) What are the types of EBS volumes?</b><br>
+Below are the types in EBS volumes,<br>
+<li>General-purpose</li>
+<li>Provisioned IOPS</li>
+<li>Magnetic</li>
+<li>Cold HDD</li>
+<li>Throughput optimized</li><br>
+<b>Q258) What are key pairs and what does it consists of?</b><br>
+Key pairs are login information that you can use to login to the EC2 instances. It consists of public key and private key that will make for the key pairs.<br><br>
+<b>Q259) How can you monitor the health status of your EC2 instances?</b><br>
+You can monitor the EC2 instances by creating a health check for the EC2 instances. You have this option when creating the load balancer and can be used by the load balancer to decide whether to send the load/traffic to the EC2 instances.<br><br>
+<b>Q260) What is the monitoring tool in AWS and what are the metrics that you can monitor for EC2?</b><br>
+CloudWatch is the monitoring tool in AWS. By using this, you can monitor metrics like, CPU utilization, disk reads, disk writes, network in, network out and so on.<br><br>
+<b>Q261) What is the S3 service? What are the different storage types, and which is the default one?</b><br>
+<b>Answer: </b>S3 is storage for the internet. You can use this S3 service to store any data, any time and access the data from any location. Below are the types of S3 storage,<br>
+<li>Standard frequently accessed</li>
+<li>Standard infrequently accessed</li>
+<li>One-zone infrequently accessed</li>
+<li>Glacier</li>
+<li>Glacier archive</li>
+<li>Intelligent tiering</li>
+<li>Reduced redundancy storage.</li>
+By default, whenever you create the S3 buckets, standard frequently accessed will be used.<br><br>
+<b>Q262) How can control the access to your S3 buckets?</b><br>
+<b>Answer: </b>You can control the access by using the ACL: Access Control List and the bucket policies.<br><br>
+<b>Q263) What is the difference between EBS and EFS?</b><br>
+<b>Answer: </b>EBS: Elastic Block Store is attached to a single instance at a time, whereas EFS: Elastic File System can be attached to multiple instances at the same time.<br><br>
+<b>Q264) What is the service that can be used for data migration?</b><br>
+<b>Answer: </b>Snowball is a service that can be used for data migration. You can use this service to move your data from one region to another region, import from S3, export from S3 or for local usage.<br><br>
+<b>Q265) What is the difference between the Internet gateway and NAT gateway?</b><br>
+The Internet gateway is used to give internet access to your instances that are running the public subnets and NAT: Network Address Translation is used to give internet access to that instances that are running in the private subnets.<br><br>
+<b>Q266) What is an EIP?</b><br>
+<b>Answer: </b>EIP: Elastic IP address is a static IP address that be used to mask the failure of EC2 instances. When you stop and start an instance, you public IP address will change. To avoid this, you can use an EIP that will maintain the same IP address when you start and stop and EC2 instance.<br><br>
+<b>Q267) What is the auditing service in AWS?</b><br>
+<b>Answer: </b>Cloud trail is the auditing service that can be used in AWS. By default, all the actions that a user takes in the AWS account is logged as an event in the CloudTrail service. You can see the events for the last 90 days by default.<br><br>
+<b>Q268) What is cloud formation?</b><br>
+<b>Answer: </b>CloudFormation is also known as Infrastructure as A Service. This service can be used to automate the infrastructure setup by writing scripts. You can write the script in either JSON or YAML format. Both are supported by CloudFormation.<br><br>
+<b>Q269) What are the types of routing policies we have in Route53?</b><br>
+<b>Answer: </b>We have the below routing policies in Route53,<br>
+<li>Simple</li>
+<li>Weighted</li>
+<li>Latency</li>
+<li>Failover</li>
+<li>Geolocation</li>
+<li>Multivalue answer</li><br>
+<b>Q270) What is CloudFront?</b><br>
+CloudFront is the content delivery network in AWS. In CloudFront, you have edge locations that act as your cache locations that are utilized by CloudFront to cache the contents.<br><br>
+<b>Q271) What are the types you have in storage gateway?</b><br>
+<b>Answer: </b>There are 3 types in storage gateway,<br>
+<li>File gateway</li>
+<li>Volume gateway</li>
+<li>Tape gateway</li><br>
+<b>Q272) What are the types you have in kinesis?</b><br>
+<b>Answer: </b>There are 3 types in kinesis:<br>
+<li>Kinesis streams</li>
+<li>Kinesis firehose</li>
+<li>Kinesis analytics</li><br>
+<b>Q272) What is the command that you can use to login to the command line tool?</b><br>
+<b>Answer: </b>You can use the “AWS configure” command to login to the command line tool. This will prompt you for the access key and secret key to login to the terminal.<br><br>
+<b>Q273) What is the command to copy contents from S3 bucket to an EC2 server?</b><br>
+<b>Answer: </b>You can use the below command,<br>
+AWS s3 cp s3://<S3 bucket name> <destination><br><br>
+<b>Q274) Which is the service that is known as serverless computing service?</b><br>
+<b>Answer: </b>Lambda is the service that is known as serverless computing. With this service, you do not have to worry about provisioning servers or managing any servers.<br><br>
+<b>Q275) What are key pairs?</b><br>
+<b>Answer: </b>Key pairs are you login information that you can use to login to the EC2 servers. Key pairs consist of public key and private key that make up for the key pairs.<br><br>
+<b>Q276) What is user data in AWS?</b><br>
+<b>Answer: </b>User data can be used to write the boot-up script that you can use to execute certain commands when your server is starting up. Whenever you want to automate certain tasks in your server, you can make use of the user data section for your boot-up scripts.<br><br>
+<b>Q277) How can you encrypt the data in S3?</b><br>
+<b>Answer: </b>You can use AES-256 and KMS to encrypt your data in S3. KMS is your Key Management Service to encrypt your data in S3.<br>
+</font>
+</body>
+</html>
+
