@@ -1,0 +1,51 @@
+<h1>Java INSTALLATION</h1>
+# yum install java-1.8.0-openjdk-devel
+# alternatives --config java(get java path from here and place in /etc/profile)
+# vim /etc/profile
+# export JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.222.b10-0.amzn2.0.1.x86_64
+# export PATH=$JAVA_HOME/bin:$PATH
+# source /etc/profile
+# echo $JAVA_HOME
+# cat /etc/os-release
+# sudo wget -O /etc/yum.repos.d/jenkins.repo https://pkg.jenkins.io/redhat-stable/jenkins.repo
+# sudo rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io.key
+# yum install jenkins -y
+# systemctl start jenkins
+# clear
+# systemctl status jenkins
+-------------------------------------------------------------------
+# cd /var/lib/jenkins/
+# cat config.xml
+# cd users
+# vim /etc/sysconfig/jenkins
+# vim /etc/profile
+---------------------------------------------------------------------------------------------
+<h1>MAVEN INSTALLATION</h1>
+# yum install maven
+# mvn --version
+# vim /etc/profile
+# source /etc/profile
+# echo $MAVEN_HOME
+# cd /tmp
+# mkdir gitrepo
+# cd gitrepo/
+# git clone https://github.com/devops-trainer/DevOpsClassCodes.git
+# cd DevOpsClassCodes/
+# ll -al
+# pwd
+# cd /tmp/gitrepo/DevOpsClassCodes/target/classes/com/edurekademo/utilities/
+# mvn compile
+# mvn goal
+# echo $JAVA_HOME
+# cd ..
+# cd /var/lib/jenkins/too/
+# echo $MAVEN_HOME
+# cd /var/lib/jenkins/workspace/Compile/target/classes/com/edurekademo/utilities/
+# cd /var/lib/jenkins/workspace/CodeReview/target/
+# cd UnitTest/target/surefire-reports/
+# pwd
+# cd /tmp/gitrepo/DevOpsClassCodes/
+# mvn test
+# cd /var/lib/jenkins/workspace/MetricCheck/target/site/cobertura/
+# cd ..
+# cd /var/lib/jenkins/workspace/Package/target/
